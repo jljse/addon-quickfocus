@@ -51,7 +51,7 @@ function createJumpMarkerFor(el, key) {
   const elLeft = rect.left + window.scrollX
   const elTop = rect.top + window.scrollY
 
-  marker = document.createElement('div')
+  const marker = document.createElement('div')
   marker.className = 'quickfocuscheck'
   const styles = [
     `position: absolute`,
@@ -69,13 +69,12 @@ function createJumpMarkerFor(el, key) {
     `border-radius: 4px`,
     `z-index: 9999`,
   ]
-  marker.innerHTML = `
-    <div style="${styles.join(';')}">
-      <div>
-        ${key}
-      </div>
-    </div>
-  `.trim()
+  marker.style.cssText = styles.join(';')
+
+  const inner = document.createElement('div')
+  inner.innerText = key
+  marker.appendChild(inner)
+
   document.body.appendChild(marker)
 }
 
