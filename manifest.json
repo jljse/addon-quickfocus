@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Quick Focus",
+    "version": "1.0",
+    "author": "jljse",
+    "homepage_url": "https://github.com/jljse/addon-quickfocus",
+  
+    "description": "Provide keyboard tab navigation to quickly move focus to the elements on screen.",
+    "permissions": ["storage"],
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "{2a427ef9-4db1-4daf-8264-f3c3e6d062d8}"
+      }
+    },
+
+    "icons": {
+      "48": "icons/quickfocus-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["src/defaultOptions.js", "src/quickfocus.js"]
+      }
+    ],
+
+    "options_ui": {
+      "page": "src/options.html",
+      "browser_style": true
+    }
+  }

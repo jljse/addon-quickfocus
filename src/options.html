@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="options.css">
+  </head>
+
+<body>
+  <main>
+    <form id="form">
+
+      <h2>Hot key</h2>
+      <p>
+        <input type="checkbox" name="hotkey-mod" id="hotkey-ctrl" value="ctrl">
+        <label for="hotkey-ctrl">Ctrl</label>
+
+        <input type="checkbox" name="hotkey-mod" id="hotkey-shift" value="shift">
+        <label for="hotkey-shift">Shift</label>
+
+        <input type="checkbox" name="hotkey-mod" id="hotkey-alt" value="alt">
+        <label for="hotkey-alt">Alt</label>
+
+        <input type="checkbox" name="hotkey-mod" id="hotkey-meta" value="meta">
+        <label for="hotkey-meta">Meta</label>
+      </p>
+      <p>
+        <label for="hotkey-text">Key</label>
+        <input type="text" name="hotkey-text" id="hotkey-text">
+      </p>
+
+      <h2>Marker color</h2>
+      <p>
+        <label for="color-border">border color</label>
+        <input type="text" name="color-border" id="color-border">
+      </p>
+
+      <p>
+        <label for="color-text">text color</label>
+        <input type="text" name="color-text" id="color-text">
+      </p>
+
+      <p>
+        <label for="color-bg">background color</label>
+        <input type="text" name="color-bg" id="color-bg">
+      </p>
+
+      <button type="submit">Save</button>
+      <button type="reset">Default</button>
+    </form>
+  </main>
+
+  <div id="msg">
+  </div>
+
+  <script src="defaultOptions.js"></script>
+  <script src="options.js"></script>
+</body>
+
+</html>

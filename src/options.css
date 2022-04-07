@@ -1,0 +1,7 @@
+#form button[type="reset"] {
+  background-color: gray;
+}
+
+#msg {
+  color: tomato;
+}
